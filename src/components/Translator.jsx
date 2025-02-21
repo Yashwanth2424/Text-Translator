@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import Loader from './Loader';
+import Loader from './Loader/Loader';
 
 function Translator() {
       const [textInput,setTextInput] = useState("")
