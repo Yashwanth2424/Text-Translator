@@ -1,9 +1,11 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
+// vite.config.js
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import tailwindcss from '@tailwindcss/vite';
 
-// https://vite.dev/config/
+const isProduction = process.env.NODE_ENV === 'production'; // Check the environment
+
 export default defineConfig({
-  plugins: [tailwindcss(),react()],
-  base: "/Text-Translator/",
-})
+  plugins: [tailwindcss(), react()],
+  base: isProduction ? '/Text-Translator/' : '/', // Conditional base path
+});

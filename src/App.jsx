@@ -1,4 +1,4 @@
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // Changed to BrowserRouter
 import Translator from "./components/Translator";
 
 function App() {
